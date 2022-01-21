@@ -27,5 +27,3 @@ class Bot(Resource):
         return {'data':result}
 api.add_resource(Bot,'/search/')
 
-if __name__ == "__main__":
-    app.run(host='192.168.8.105',port=3000,debug = True)
