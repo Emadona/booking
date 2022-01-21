@@ -28,4 +28,4 @@ class Bot(Resource):
 api.add_resource(Bot,'/search/')
 
 if __name__ == "__main__":
-    app.run(debug = False)
+    app.run(port=3000,debug = False)
