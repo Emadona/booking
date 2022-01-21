@@ -27,3 +27,5 @@ class Bot(Resource):
         return {'data':result}
 api.add_resource(Bot,'/search/')
 
+if __name__ == "__main__":
+    app.run(debug = False)
