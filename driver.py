@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 
 class MyBot:
@@ -5,6 +6,7 @@ class MyBot:
         user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 
         self.options = webdriver.ChromeOptions()
+        self.options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         self.options.headless = True
         self.options.add_argument(f'user-agent={user_agent}')
         self.options.add_argument("--window-size=1920,1080")
@@ -17,6 +19,6 @@ class MyBot:
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--disable-dev-shm-usage')
         self.options.add_argument('--no-sandbox')
-        self.driver = webdriver.Chrome(executable_path="chromedriver.exe", options=self.options)
+        self.driver = webdriver.Chrome(executable_path= os.environ.get('CHROMEDRIVER_PATH'), options=self.options)
         
         
