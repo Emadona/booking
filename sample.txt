@@ -1,0 +1,20 @@
+Sample:
+
+base url = https://booking-project-app.herokuapp.com/search
+
+
+parameters:
+city
+adults
+children
+checkin_year
+checkin_month
+checkin_day
+checkout_year
+checkout_month
+checkout_day
+selected_currecy
+
+example:
+
+https://booking-project-app.herokuapp.com/search?city=london&adults=2&children=0&checkin_year=2022&checkin_month=3&checkin_day=3&checkout_year=2022&checkout_month=3&checkout_day=10&selected_currecy=USD
